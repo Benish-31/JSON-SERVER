@@ -1,0 +1,36 @@
+{
+    "user":[
+        {
+            "id":1,
+            "name":"Ngabo Jessy",
+            "email":"Ngabo@jessy.biz",
+            "profile":"pexels-anna-nekrashevich-6801642.jpg",
+            "status":"Active",
+            "role":"Admin"
+        },
+        {
+            "id":2,
+            "name":"Ngenzi John",
+            "email":"Ngenzi@john.biz",
+            "profile":"pexels-rafael-barros-1819483.jpg",
+            "status":"Active",
+            "role":"Owner"
+        },
+        {
+            "id":3,
+            "name":"Ngoga Jack",
+            "email":"Ngoga@jack.biz",
+            "profile":"pexels-cottonbro-5082976.jpg",
+            "status":"Inactive",
+            "role":"Member"
+        },
+        {
+            "id":4,
+            "name":"Sangwa James",
+            "email":"Sangwa@james.biz",
+            "profile":"pexels-dellon-thomas-2216607.jpg",
+            "status":"Active",
+            "role":"Member"
+        }
+    ]
+}

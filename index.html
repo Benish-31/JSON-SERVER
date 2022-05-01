@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json Server</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+    <div class="container mx-auto"><!-- to center-->
+        <h1 class="text-center text-4xl text-indigo-400 py-12">JSON Server</h1> <!--4xl is font size py12 is padding top and bottom-->
+        <table class="min-w-full divide-y divide-gray-200"><!-- minimum width -->
+            <button style="border: 1px solid indigo; padding: 10px; margin: 25px; border-radius: 25px;" id="active" onclick="getActive()">Active</button>
+            <button style="border: 1px solid indigo; padding: 10px; margin: 25px; border-radius: 25px;" id="inactive" onclick="getInactive()">Inactive</button>
+            <button style="border: 1px solid indigo; padding: 10px; margin: 25px; border-radius: 25px;" id="member" onclick="getMember()">Member</button>
+            <button style="border: 1px solid indigo; padding: 10px; margin: 25px; border-radius: 25px;" id="owner" onclick="getOwner()">Owner</button>
+            <button style="border: 1px solid indigo; padding: 10px; margin: 25px; border-radius: 25px;" id="admin" onclick="getAdmin()">Admin</button>
+            <thead class="bg-gray-50">
+                <tr>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking g-wider">Employee</th><!-- py-6 left and right padding py-3 top and bottom text left align text to left side textxs:font family-->
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking g-wider">Status</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking g-wider">Role</th>
+                </tr>
+            </thead>
+            <tbody class="bg-white divide-y divide-gray-200" id="tbody"><!-- this will add a divider -->
+                <tr>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 h-10 w-10">
+                                <img src="pexels-dellon-thomas-2216607.jpg" class="h-10 w-10 rounded-full" alt="">
+                            </div>
+                            <div class="ml-4"> <!-- margin-left: 4 -->
+                                <div class="text-sm font-medium text-gray-900">
+                                    Gisa Josh
+                                </div>
+                                <div class="text-sm text-gray-500">
+                                    josh.gisa@example.com
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                            Active
+                        </span>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                        <span class="text-sm text-gray-500">Admin</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 h-10 w-10">
+                                <img src="pexels-olivet-pictures-2691608.jpg" class="h-10 w-10 rounded-full" alt="">
+                            </div>
+                            <div class="ml-4"> <!-- margin-left: 4 -->
+                                <div class="text-sm font-medium text-gray-900">
+                                    Goro Joshy
+                                </div>
+                                <div class="text-sm text-gray-500">
+                                    joshy.gisa@example.com
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                            Active
+                        </span>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                        <span class="text-sm text-gray-500">Admin</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 h-10 w-10">
+                                <img src="pexels-anna-nekrashevich-6801642.jpg" class="h-10 w-10 rounded-full" alt="">
+                            </div>
+                            <div class="ml-4"> <!-- margin-left: 4 -->
+                                <div class="text-sm font-medium text-gray-900">
+                                    Andrea Josh
+                                </div>
+                                <div class="text-sm text-gray-500">
+                                    anna.gisa@example.com
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                            Inactive
+                        </span>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                        <span class="text-sm text-gray-500">Member</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 h-10 w-10">
+                                <img src="pexels-andrea-piacquadio-874158.jpg" class="h-10 w-10 rounded-full" alt="">
+                            </div>
+                            <div class="ml-4"> <!-- margin-left: 4 -->
+                                <div class="text-sm font-medium text-gray-900">
+                                    Dellon Jason
+                                </div>
+                                <div class="text-sm text-gray-500">
+                                    dellon.gisa@example.com
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                            Active
+                        </span>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                        <span class="text-sm text-gray-500">Admin</span>
+                    </td>
+                </tr>
+
+            
+            </tbody>
+        </table>
+    </div>    
+    
+    <!-- "npm init -y" creates package.json -->
+    <!-- "npm i json-server" installing the json server from the npm -->
+    <script src="./index.js"></script>
+</body>
+</html>
